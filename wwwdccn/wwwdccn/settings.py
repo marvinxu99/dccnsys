@@ -116,7 +116,8 @@ WSGI_APPLICATION = 'wwwdccn.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-DATABASE_PROVIDER = os.environ.get('DATABASE_PROVIDER', 'postgresql')
+# DATABASE_PROVIDER = os.environ.get('DATABASE_PROVIDER', 'postgresql')
+DATABASE_PROVIDER = os.environ.get('DATABASE_PROVIDER', 'sqlite3')
 if DATABASE_PROVIDER == 'postgresql':
     DB_NAME = os.environ.get('DB_NAME', 'dccndb')
     DB_USERNAME = os.environ.get('DB_USERNAME', 'dccndbadm')
